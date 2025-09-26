@@ -1,12 +1,12 @@
 //your JS code here. If required.
-function removeColor {
-	let select = document.getElementById("colorSelect");
+document.getElementById("removeBtn").addEventListener("click", () => {
+	let colorSelect = document.getElememtById("colorSelect");
+	let selectedColor = colorSelect.value;
 
-	let selectedColor = select.value;
-
-	for (let i = 0; i < select.options.length; i++) {
-		if(select.options.value[i] === selectedColor) {
-			select.remove(i);
+	for (let i = 0; i < colorSelect.options.length; i++) {
+		if(colorSelect.options[i].text === selectedColor) {
+			colorSelect.remove(i);
 			break;
 		}
 	}
+})
